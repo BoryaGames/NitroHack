@@ -1,0 +1,20 @@
+<html>
+<head>
+<style>
+</style>
+<script>
+var code = null;
+window.onload = function(){
+var sim = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+setInterval(function(){
+code = ``;
+$.getJSON("https://discordapp.com/api/v6/entitlements/gift-codes/" + code,function(gift){
+alert(gift);
+});
+},100);
+};
+</script>
+</head>
+<body>
+</body>
+</html>
