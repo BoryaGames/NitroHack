@@ -10,10 +10,11 @@ window.onload = function(){
 var sim = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
 setInterval(function(){
 code = ``;
+document.body.innerHTML += code + "<br/>";
 $.getJSON("https://discordapp.com/api/v6/entitlements/gift-codes/" + code,function(gift){
 alert(gift);
 });
-},100);
+},1000);
 };
 </script>
 </head>
