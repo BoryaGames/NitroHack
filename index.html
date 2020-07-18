@@ -44,9 +44,9 @@ code += `${sim[Math.floor(Math.random()*sim.length)]}`;
 code += `${sim[Math.floor(Math.random()*sim.length)]}`;
 document.body.innerHTML += code + "<br/>";
 $.getJSON("https://discordapp.com/api/v6/entitlements/gift-codes/" + code,function(gift){
-alert(gift);
-code = ``;
+alert(JSON.stringify(gift));
 });
+code = ``;
 },1000);
 };
 } catch(e) {
