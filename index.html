@@ -6,7 +6,7 @@
 </script>
 <script>
 try {
-var code = null;
+var code = "";
 window.onload = function(){
 var sim = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890";
 setInterval(function(){
@@ -51,7 +51,7 @@ code = ``;
 $.getJSON("https://discordapp.com/api/v6/entitlements/gift-codes/" + code2,function(gift){
 alert(JSON.stringify(gift));
 });
-},500);
+},10);
 };
 } catch(e) {
 alert(e);
