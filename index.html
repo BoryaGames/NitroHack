@@ -42,14 +42,14 @@ code += `${sim[Math.floor(Math.random()*sim.length)]}`;
 code += `${sim[Math.floor(Math.random()*sim.length)]}`;
 code += `${sim[Math.floor(Math.random()*sim.length)]}`;
 code += `${sim[Math.floor(Math.random()*sim.length)]}`;
-document.body.innerHTML += code + "<br/>";
+document.body.innerHTML += "<p id=' + code2 + '>" + code + "</p><br/>";
 var code2 = "";
 for (var key in code) {
 code2 += code[key];
 }
 code = ``;
 $.getJSON("https://discordapp.com/api/v6/entitlements/gift-codes/" + code2,function(gift){
-alert(JSON.stringify(gift));
+document.querySelector('#' + code2).style.color = "Lime";
 });
 },10);
 };
